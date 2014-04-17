@@ -1,11 +1,21 @@
 {
   "name": "disqus-here",
   "version": "0.0.1",
+  "main" : "dist/disqus-here.js",
+  "ignore" : [
+    "node_modules"
+  ],
+  "license": "MIT",
+  "keywords": [
+    "angular",
+    "disqus",
+    "comments",
+    "angular-disqus"
+  ],
   "dependencies": {
+    "angular": "~1.2.16"
   },
   "devDependencies": {
-    "angular": "latest",
-    "angular-mocks": "latest",
-    "jquery": "latest"
+    "angular-mocks": "latest"
   }
 }
