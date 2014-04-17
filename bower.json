@@ -6,6 +6,10 @@
     "node_modules"
   ],
   "license": "MIT",
+  "repository" : {
+    "type": "git",
+    "url": "git://github.com/lukasz-zak/disqus-here"
+  },
   "keywords": [
     "angular",
     "disqus",
