@@ -1,160 +1,319 @@
 <!doctype html>
 <html>
-  <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="chrome=1">
-    <title>Disqus-here by lukasz-zak</title>
-    <link rel="stylesheet" href="stylesheets/styles.css">
-    <link rel="stylesheet" href="stylesheets/pygment_trac.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
-    <script src="javascripts/main.js"></script>
-    <!--[if lt IE 9]>
-      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-    <![endif]-->
-    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="chrome=1">
+  <title>Disqus-here by lukasz-zak</title>
+  <link rel="stylesheet" href="stylesheets/styles.css">
+  <link rel="stylesheet" href="stylesheets/pygment_trac.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+  <script src="javascripts/main.js"></script>
+  <!--[if lt IE 9]>
+  <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+  <![endif]-->
+  <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
 
-  </head>
-  <body>
+</head>
+<body>
 
-      <header>
-        <h1>Disqus-here</h1>
-        <p>Angular directive for Disqus</p>
-      </header>
+<header>
+  <h1>Disqus-here</h1>
 
-      <div id="banner">
-        <span id="logo"></span>
+  <p>Angular directive for Disqus</p>
+</header>
 
-        <a href="https://github.com/lukasz-zak/disqus-here" class="button fork"><strong>View On GitHub</strong></a>
-        <div class="downloads">
-          <span>Downloads:</span>
-          <ul>
-            <li><a href="https://github.com/lukasz-zak/disqus-here/zipball/master" class="button">ZIP</a></li>
-            <li><a href="https://github.com/lukasz-zak/disqus-here/tarball/master" class="button">TAR</a></li>
-          </ul>
-        </div>
-      </div><!-- end banner -->
+<div id="banner">
+  <span id="logo"></span>
 
-    <div class="wrapper">
-      <nav>
-        <ul></ul>
-      </nav>
-      <section>
-        <h1>
-<a name="disqushere" class="anchor" href="#disqushere"><span class="octicon octicon-link"></span></a>disqusHere</h1>
+  <a href="https://github.com/lukasz-zak/disqus-here" class="button fork">
+    <strong>View On GitHub</strong>
+  </a>
+  <div class="downloads">
+    <span>Downloads:</span>
+    <ul>
+      <li>
+        <a href="https://github.com/lukasz-zak/disqus-here/zipball/master" class="button">ZIP</a>
+      </li>
+      <li>
+        <a href="https://github.com/lukasz-zak/disqus-here/tarball/master" class="button">TAR</a>
+      </li>
+    </ul>
+  </div>
+</div>
+<!-- end banner -->
 
-<p>Angular directive for embeding Disqus comments on your site.</p>
+<div class="wrapper">
+  <nav>
+    <ul></ul>
+  </nav>
+  <section>
+    <h1>
+      <a name="disqushere" class="anchor" href="#disqushere">
+        <span class="octicon octicon-link"></span>
+      </a>
+      disqusHere
+    </h1>
 
-<p>Apart of standard disqus fields you can toggle visibility of disqus comments with ajax reloading them after switching visible on.</p>
+    <p>Angular directive for embeding Disqus comments on your site.</p>
 
-<p>You can also use your own function as Disqus onReady callback.</p>
+    <p>Apart of standard disqus fields you can toggle visibility of disqus comments with ajax reloading them after
+      switching visible on.</p>
 
-<h2>
-<a name="getting-started" class="anchor" href="#getting-started"><span class="octicon octicon-link"></span></a>Getting Started</h2>
+    <p>You can also use your own function as Disqus onReady callback.</p>
 
-<p>Download the <a href="https://raw.githubusercontent.com/lukasz-zak/disqus-here/master/dist/disqus-here.min.js">production version</a> or the <a href="https://raw.githubusercontent.com/lukasz-zak/disqus-here/master/dist/disqus-here.js">development version</a>.</p>
+    <h2>
+      <a name="getting-started" class="anchor" href="#getting-started">
+        <span class="octicon octicon-link"></span>
+      </a>
+      Getting Started
+    </h2>
 
-<p>In your web page:</p>
+    <p>Download the
+      <a href="https://raw.githubusercontent.com/lukasz-zak/disqus-here/master/dist/disqus-here.min.js">production
+        version
+      </a>
+      or the
+      <a href="https://raw.githubusercontent.com/lukasz-zak/disqus-here/master/dist/disqus-here.js">development
+        version
+      </a>
+      .
+    </p>
 
-<div class="highlight highlight-html"><pre><span class="nt">&lt;script </span><span class="na">src=</span><span class="s">"angular.js"</span><span class="nt">&gt;&lt;/script&gt;</span>
-<span class="nt">&lt;script </span><span class="na">src=</span><span class="s">"dist/disqus-here.min.js"</span><span class="nt">&gt;&lt;/script&gt;</span>
-</pre></div>
+    <p>In your web page:</p>
 
-<h2>
-<a name="documentation" class="anchor" href="#documentation"><span class="octicon octicon-link"></span></a>Documentation</h2>
+    <div class="highlight highlight-html"><pre><span class="nt">&lt;script </span><span class="na">src=</span><span
+        class="s">"angular.js"</span><span class="nt">&gt;&lt;/script&gt;</span>
+<span class="nt">&lt;script </span><span class="na">src=</span><span class="s">"dist/disqus-here.min.js"</span><span
+          class="nt">&gt;&lt;/script&gt;</span>
+</pre>
+    </div>
 
-<h4>
-<a name="shortname" class="anchor" href="#shortname"><span class="octicon octicon-link"></span></a>shortname</h4>
+    <h2>
+      <a name="documentation" class="anchor" href="#documentation">
+        <span class="octicon octicon-link"></span>
+      </a>
+      Documentation
+    </h2>
 
-<p>Type: <code>String</code> <br>
-Description: <code>Short name from Disqus settings</code> <a href="http://help.disqus.com/customer/portal/articles/472098-javascript-configuration-variables#disqus_disable_mobile">read more</a></p>
+    <h4>
+      <a name="shortname" class="anchor" href="#shortname">
+        <span class="octicon octicon-link"></span>
+      </a>
+      shortname
+    </h4>
 
-<h4>
-<a name="url" class="anchor" href="#url"><span class="octicon octicon-link"></span></a>url</h4>
+    <p>Type:
+      <code>String</code>
+      <br>
+      Description:
+      <code>Short name from Disqus settings</code>
+      <a href="http://help.disqus.com/customer/portal/articles/472098-javascript-configuration-variables#disqus_disable_mobile">
+        read more
+      </a>
+    </p>
 
-<p>Type: <code>String</code> <br>
-Description: <code>Disqus url param</code> <a href="http://help.disqus.com/customer/portal/articles/472098-javascript-configuration-variables#disqus_disable_mobile">read more</a></p>
+    <h4>
+      <a name="url" class="anchor" href="#url">
+        <span class="octicon octicon-link"></span>
+      </a>
+      url
+    </h4>
 
-<h4>
-<a name="identifier" class="anchor" href="#identifier"><span class="octicon octicon-link"></span></a>identifier</h4>
+    <p>Type:
+      <code>String</code>
+      <br>
+      Description:
+      <code>Disqus url param</code>
+      <a href="http://help.disqus.com/customer/portal/articles/472098-javascript-configuration-variables#disqus_disable_mobile">
+        read more
+      </a>
+    </p>
 
-<p>Type: <code>String|Integer</code> <br>
-Description: <code>Disqus identifier param</code> <a href="http://help.disqus.com/customer/portal/articles/472098-javascript-configuration-variables#disqus_disable_mobile">read more</a></p>
+    <h4>
+      <a name="identifier" class="anchor" href="#identifier">
+        <span class="octicon octicon-link"></span>
+      </a>
+      identifier
+    </h4>
 
-<h4>
-<a name="title" class="anchor" href="#title"><span class="octicon octicon-link"></span></a>title</h4>
+    <p>Type:
+      <code>String|Integer</code>
+      <br>
+      Description:
+      <code>Disqus identifier param</code>
+      <a href="http://help.disqus.com/customer/portal/articles/472098-javascript-configuration-variables#disqus_disable_mobile">
+        read more
+      </a>
+    </p>
 
-<p>Type: <code>String</code> <br>
-Description: <code>Disqus title param</code> <a href="http://help.disqus.com/customer/portal/articles/472098-javascript-configuration-variables#disqus_disable_mobile">read more</a></p>
+    <h4>
+      <a name="title" class="anchor" href="#title">
+        <span class="octicon octicon-link"></span>
+      </a>
+      title
+    </h4>
 
-<h4>
-<a name="category-id" class="anchor" href="#category-id"><span class="octicon octicon-link"></span></a>category-id</h4>
+    <p>Type:
+      <code>String</code>
+      <br>
+      Description:
+      <code>Disqus title param</code>
+      <a href="http://help.disqus.com/customer/portal/articles/472098-javascript-configuration-variables#disqus_disable_mobile">
+        read more
+      </a>
+    </p>
 
-<p>Type: <code>String</code> <br>
-Description: <code>Disqus category_id param</code> <a href="http://help.disqus.com/customer/portal/articles/472098-javascript-configuration-variables#disqus_disable_mobile">read more</a></p>
+    <h4>
+      <a name="category-id" class="anchor" href="#category-id">
+        <span class="octicon octicon-link"></span>
+      </a>
+      category-id
+    </h4>
 
-<h4>
-<a name="disable-mobile" class="anchor" href="#disable-mobile"><span class="octicon octicon-link"></span></a>disable-mobile</h4>
+    <p>Type:
+      <code>String</code>
+      <br>
+      Description:
+      <code>Disqus category_id param</code>
+      <a href="http://help.disqus.com/customer/portal/articles/472098-javascript-configuration-variables#disqus_disable_mobile">
+        read more
+      </a>
+    </p>
 
-<p>Type: <code>Boolean</code> <br>
-Description: <code>Disqus disable_mobile param</code> <a href="http://help.disqus.com/customer/portal/articles/472098-javascript-configuration-variables#disqus_disable_mobile">read more</a></p>
+    <h4>
+      <a name="disable-mobile" class="anchor" href="#disable-mobile">
+        <span class="octicon octicon-link"></span>
+      </a>
+      disable-mobile
+    </h4>
 
-<h4>
-<a name="on-ready" class="anchor" href="#on-ready"><span class="octicon octicon-link"></span></a>on-ready</h4>
+    <p>Type:
+      <code>Boolean</code>
+      <br>
+      Description:
+      <code>Disqus disable_mobile param</code>
+      <a href="http://help.disqus.com/customer/portal/articles/472098-javascript-configuration-variables#disqus_disable_mobile">
+        read more
+      </a>
+    </p>
 
-<p>Type: <code>Function</code><br>
-Description: <code>Function which will be fired with disqus onReady callback</code></p>
+    <h4>
+      <a name="on-ready" class="anchor" href="#on-ready">
+        <span class="octicon octicon-link"></span>
+      </a>
+      on-ready
+    </h4>
 
-<h4>
-<a name="display-comments" class="anchor" href="#display-comments"><span class="octicon octicon-link"></span></a>display-comments</h4>
+    <p>Type:
+      <code>Function</code>
+      <br>
+      Description:
+      <code>Function which will be fired with disqus onReady callback</code>
+    </p>
 
-<p>Type: <code>Boolean</code><br>
-Description: <code>Binded value for toggling visibility of comments</code> <br>
-Default: <code>true</code></p>
+    <h4>
+      <a name="display-comments" class="anchor" href="#display-comments">
+        <span class="octicon octicon-link"></span>
+      </a>
+      display-comments
+    </h4>
 
-<h2>
-<a name="examples" class="anchor" href="#examples"><span class="octicon octicon-link"></span></a>Examples</h2>
+    <p>Type:
+      <code>Boolean</code>
+      <br>
+      Description:
+      <code>Binded value for toggling visibility of comments</code>
+      <br>
+      Default:
+      <code>true</code>
+    </p>
 
-<h4>
-<a name="min-usage" class="anchor" href="#min-usage"><span class="octicon octicon-link"></span></a>Min usage:</h4>
+    <h2>
+      <a name="examples" class="anchor" href="#examples">
+        <span class="octicon octicon-link"></span>
+      </a>
+      Examples
+    </h2>
 
-<div class="highlight highlight-html"><pre><span class="nt">&lt;disqus-here</span> <span class="na">shortname=</span><span class="s">"your-disqus-shortname"</span><span class="nt">&gt;&lt;/disqus-here&gt;</span>
-</pre></div>
+    <h4>
+      <a name="min-usage" class="anchor" href="#min-usage">
+        <span class="octicon octicon-link"></span>
+      </a>
+      Min usage:
+    </h4>
 
-<h4>
-<a name="full-usage" class="anchor" href="#full-usage"><span class="octicon octicon-link"></span></a>Full usage:</h4>
+    <div class="highlight highlight-html">
+      <pre><span class="nt">&lt;disqus-here</span> <span
+        class="na">shortname=</span><span class="s">"your-disqus-shortname"</span><span class="nt">&gt;&lt;/disqus-here&gt;</span>
+      </pre>
+    </div>
+    <a href="basic-example.html">EXAMPLE</a>
+    <hr/>
 
-<div class="highlight highlight-html"><pre><span class="nt">&lt;disqus-here</span> <span class="na">shortname=</span><span class="s">"your-disqus-shortname"</span>
+    <h4>
+      <a name="full-usage" class="anchor" href="#full-usage">
+        <span class="octicon octicon-link"></span>
+      </a>
+      Full usage:
+    </h4>
+
+    <div class="highlight highlight-html"><pre><span class="nt">&lt;disqus-here</span> <span
+        class="na">shortname=</span><span class="s">"your-disqus-shortname"</span>
              <span class="na">url=</span><span class="s">"{{disqusPageUrl}}"</span>
              <span class="na">identifier=</span><span class="s">"{{disqusPageID}}"</span>
              <span class="na">title=</span><span class="s">"{{disqusPageTitle}}"</span>
              <span class="na">disable-mobile=</span><span class="s">"{{disqusDisableMobile}}"</span>
              <span class="na">category-id=</span><span class="s">"{{disqusCatID}}"</span>
              <span class="na">on-ready=</span><span class="s">"onCommentsReady()"</span>
-             <span class="na">display-comments=</span><span class="s">"commentsVisible"</span><span class="nt">&gt;</span>
+             <span class="na">display-comments=</span><span class="s">"commentsVisible"</span><span
+          class="nt">&gt;</span>
 <span class="nt">&lt;/disqus-here&gt;</span>
-</pre></div>
-
-<h2>
-<a name="contributing" class="anchor" href="#contributing"><span class="octicon octicon-link"></span></a>Contributing</h2>
-
-<p>Feel free to open an issue or send a pull request.</p>
-
-<h2>
-<a name="license" class="anchor" href="#license"><span class="octicon octicon-link"></span></a>License</h2>
-
-<p>MIT License. See the LICENSE file.</p>
-
-<h2>
-<a name="author" class="anchor" href="#author"><span class="octicon octicon-link"></span></a>Author</h2>
-
-<p>Copyright © 2014 Łukasz Żak. Contact me at <code>&lt;zlukasz.poczta@gmail.com&gt;</code>.</p>
-      </section>
-      <footer>
-        <p>Project maintained by <a href="https://github.com/lukasz-zak">lukasz-zak</a></p>
-        <p><small>Hosted on GitHub Pages &mdash; Theme by <a href="https://twitter.com/michigangraham">mattgraham</a></small></p>
-      </footer>
+</pre>
     </div>
-    <!--[if !IE]><script>fixScale(document);</script><![endif]-->
-    
-  </body>
+
+    <h2>
+      <a name="contributing" class="anchor" href="#contributing">
+        <span class="octicon octicon-link"></span>
+      </a>
+      Contributing
+    </h2>
+
+    <p>Feel free to open an issue or send a pull request.</p>
+
+    <h2>
+      <a name="license" class="anchor" href="#license">
+        <span class="octicon octicon-link"></span>
+      </a>
+      License
+    </h2>
+
+    <p>MIT License. See the LICENSE file.</p>
+
+    <h2>
+      <a name="author" class="anchor" href="#author">
+        <span class="octicon octicon-link"></span>
+      </a>
+      Author
+    </h2>
+
+    <p>Copyright © 2014 Łukasz Żak. Contact me at
+      <code>&lt;zlukasz.poczta@gmail.com&gt;</code>
+      .
+    </p>
+  </section>
+  <footer>
+    <p>Project maintained by
+      <a href="https://github.com/lukasz-zak">lukasz-zak</a>
+    </p>
+    <p>
+      <small>Hosted on GitHub Pages &mdash; Theme by
+        <a href="https://twitter.com/michigangraham">mattgraham</a>
+      </small>
+    </p>
+  </footer>
+</div>
+<!--[if !IE]>
+<script>fixScale(document);</script><![endif]-->
+
+</body>
 </html>
