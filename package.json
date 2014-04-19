@@ -1,6 +1,6 @@
 {
   "name": "disqus-here",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "disqusHere",
   "keywords": [
     "angular",
@@ -14,6 +14,9 @@
     "name": "Łukasz Żak",
     "email": "zlukasz.poczta@gmail.com",
     "url": "https://github.com/lukasz-zak"
+  },
+  "scripts": {
+    "test": "./node_modules/.bin/karma start --single-run --browsers PhantomJS"
   },
   "repository": {
     "type": "git",
