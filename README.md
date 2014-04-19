@@ -1,4 +1,4 @@
-# disqusHere
+# disqusHere [![Build Status](https://travis-ci.org/lukasz-zak/disqus-here.svg?branch=master)](https://travis-ci.org/lukasz-zak/disqus-here)
 
 Angular directive for embeding Disqus comments on your site.
 
