@@ -20,6 +20,7 @@
     "angular": "~1.2.16"
   },
   "devDependencies": {
-    "angular-mocks": "latest"
+    "angular-mocks": "latest",
+    "jquery" : "latest"
   }
 }
