@@ -1,0 +1,36 @@
+{
+  "name": "disqus-here",
+  "version": "0.0.2",
+  "main": "dist/disqus-here.js",
+  "ignore": [
+    "node_modules"
+  ],
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/lukasz-zak/disqus-here"
+  },
+  "keywords": [
+    "angular",
+    "disqus",
+    "comments",
+    "angular-disqus"
+  ],
+  "dependencies": {
+    "angular": "~1.2.16"
+  },
+  "devDependencies": {
+    "angular-mocks": "latest"
+  },
+  "homepage": "https://github.com/lukasz-zak/disqus-here",
+  "_release": "0.0.2",
+  "_resolution": {
+    "type": "version",
+    "tag": "v0.0.2",
+    "commit": "ddb8ce8a5da74b51bd2cf08a3120f117b3a9cefd"
+  },
+  "_source": "git://github.com/lukasz-zak/disqus-here.git",
+  "_target": "~0.0.2",
+  "_originalSource": "disqus-here",
+  "_direct": true
+}

@@ -3,7 +3,8 @@
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="chrome=1">
-  <title>Disqus-here by lukasz-zak</title>
+  <title>Disqus-here - basic example by lukasz-zak</title>
+  <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootswatch/3.1.1/flatly/bootstrap.min.css">
   <link rel="stylesheet" href="stylesheets/styles.css">
   <link rel="stylesheet" href="stylesheets/pygment_trac.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
@@ -14,7 +15,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
 
 </head>
-<body>
+<body ng-app="demo">
 
 <header>
   <h1>Disqus-here</h1>
@@ -42,20 +43,41 @@
 </div>
 <!-- end banner -->
 
-<div class="wrapper">
+<div class="wrapper" ng-controller="mainCtrl">
   <nav>
     <ul></ul>
   </nav>
 
   <section>
+    <a href="./" class="left"><--- Back to home</a>
+    <a href="./advanced-usage.html" class="right">Advanced usage ---></a>
+    <br/>
+    <br/>
+
     <h2>
       <a name="disqushere" class="anchor" href="#disqushere">
         <span class="octicon octicon-link"></span>
       </a>
-      disqusHere - basic example
-
-      <disqus-here></disqus-here>
+      Disqus Here - basic example
     </h2>
+    <hr/>
+
+    <h4>in HTML file:</h4>
+    <div class="highlight highlight-html">
+      <pre><span class="nt">&lt;disqus</span><span class="na">-here</span> <span class="na">shortname=</span><span class="s" ng-non-bindable>"{{name}}"</span><span class="nt">&gt;</span><span class="nt">&lt;</span>/disqus-here&gt;
+</pre>
+    </div>
+
+    <h4>in angular controller:</h4>
+    <div class="highlight highlight-html">
+      <pre><span class="nx">$scope</span><span class="p">.</span><span class="nx">name</span> <span class="o">=</span> <span class="s1">'disqushere'</span><span class="p">;</span>
+</pre>
+    </div>
+
+    <h3>Result:</h3>
+    <div class="result">
+      <disqus-here shortname="{{name}}"></disqus-here>
+    </div>
 
   </section>
 </div>
@@ -72,8 +94,10 @@
   </p>
 </footer>
 </div>
-<!--[if !IE]>
-<script>fixScale(document);</script><![endif]-->
+<!--[if !IE]><script>fixScale(document);</script><![endif]-->
 
+<script src="bower_components/angular/angular.min.js"></script>
+<script src="bower_components/disqus-here/dist/disqus-here.min.js"></script>
+<script src="javascripts/app.js"></script>
 </body>
 </html>

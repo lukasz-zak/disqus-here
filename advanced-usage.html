@@ -1,0 +1,128 @@
+
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="chrome=1">
+  <title>Disqus-here - advanced example by lukasz-zak</title>
+  <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootswatch/3.1.1/flatly/bootstrap.min.css">
+  <link rel="stylesheet" href="stylesheets/styles.css">
+  <link rel="stylesheet" href="stylesheets/pygment_trac.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+  <script src="javascripts/main.js"></script>
+  <!--[if lt IE 9]>
+  <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+  <![endif]-->
+  <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+
+</head>
+<body ng-app="demo">
+
+<header>
+  <h1>Disqus-here</h1>
+
+  <p>Angular directive for Disqus</p>
+</header>
+
+<div id="banner">
+  <span id="logo"></span>
+
+  <a href="https://github.com/lukasz-zak/disqus-here" class="button fork">
+    <strong>View On GitHub</strong>
+  </a>
+  <div class="downloads">
+    <span>Downloads:</span>
+    <ul>
+      <li>
+        <a href="https://github.com/lukasz-zak/disqus-here/zipball/master" class="button">ZIP</a>
+      </li>
+      <li>
+        <a href="https://github.com/lukasz-zak/disqus-here/tarball/master" class="button">TAR</a>
+      </li>
+    </ul>
+  </div>
+</div>
+<!-- end banner -->
+
+<div class="wrapper" ng-controller="mainCtrl">
+  <nav>
+    <ul></ul>
+  </nav>
+
+  <section>
+    <a href="basic-usage.html" class="left"><--- Basic usage</a>
+    <a href="./" class="right">Home page ---></a>
+    <br/>
+    <br/>
+
+    <h2>
+      <a name="disqushere" class="anchor" href="#disqushere">
+        <span class="octicon octicon-link"></span>
+      </a>
+      Disqus Here - advanced example
+    </h2>
+    <hr/>
+
+    <h4>in HTML file:</h4>
+    <div class="highlight highlight-html" ng-non-bindable>
+      <pre><span class="nt">&lt;button</span> <span class="na">ng-click=</span><span class="s">"toggleComments()"</span><span class="nt">&gt;</span>Toggle comments<span class="nt">&lt;/button&gt;</span>
+<span class="nt">&lt;div</span> <span class="na">ng-show=</span><span class="s">"showComments"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;disqus</span><span class="na">-here</span> <span class="na">shortname=</span><span class="s">"{{name}}"</span> <span class="na">url=</span><span class="s">"{{url}}"</span>
+               <span class="na">category-id=</span><span class="s">"id"</span> <span class="na">disable-mobile=</span><span class="s">"false"</span>
+               <span class="na">title=</span><span class="s">"{{title}}"</span> <span class="na">on-ready=</span><span class="s">"onLoad()"</span>
+               <span class="na">display-comments=</span><span class="s">"showComments"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;</span>/disqus-here&gt;
+<span class="nt">&lt;/div&gt;</span>
+</pre>
+    </div>
+
+    <h4>in angular controller:</h4>
+    <div class="highlight highlight-html">
+      <pre><span class="nx">$scope</span><span class="p">.</span><span class="nx">name</span> <span class="o">=</span> <span class="s1">'disqushere'</span><span class="p">;</span>
+<span class="nx">$scope</span><span class="p">.</span><span class="nx">url</span> <span class="o">=</span> <span class="s1">'http://lukasz-zak.github.io/disqus-here/'</span><span class="p">;</span>
+<span class="nx">$scope</span><span class="p">.</span><span class="nx">title</span> <span class="o">=</span> <span class="s1">'Disqus here advanced example!'</span><span class="p">;</span>
+<span class="nx">$scope</span><span class="p">.</span><span class="nx">id</span> <span class="o">=</span> <span class="s1">'2014'</span><span class="p">;</span>
+<span class="nx">$scope</span><span class="p">.</span><span class="nx">showComments</span> <span class="o">=</span> <span class="kc">false</span><span class="p">;</span>
+
+<span class="nx">$scope</span><span class="p">.</span><span class="nx">toggleComments</span> <span class="o">=</span> <span class="kd">function</span> <span class="p">()</span> <span class="p">{</span>
+  <span class="nx">$scope</span><span class="p">.</span><span class="nx">showComments</span> <span class="o">=</span> <span class="o">!</span><span class="nx">$scope</span><span class="p">.</span><span class="nx">showComments</span><span class="p">;</span>
+<span class="p">};</span>
+
+<span class="nx">$scope</span><span class="p">.</span><span class="nx">onLoad</span> <span class="o">=</span> <span class="kd">function</span> <span class="p">()</span> <span class="p">{</span>
+  <span class="nx">alert</span><span class="p">(</span><span class="s1">'Disqus loaded!\n(alert from callback)'</span><span class="p">);</span>
+<span class="p">};</span>
+</pre>
+    </div>
+
+    <h3>Result:</h3>
+    <button class="btn btn-success" ng-click="toggleComments()">Toggle comments</button>
+    <br/><br/>
+    <div class="result" ng-show="showComments">
+      <disqus-here shortname="{{name}}" url="{{url}}"
+                   category-id="id" disable-mobile="false"
+                   title="{{title}}" on-ready="onLoad()"
+                   display-comments="showComments">
+      </disqus-here>
+    </div>
+
+  </section>
+</div>
+
+
+<footer>
+  <p>Project maintained by
+    <a href="https://github.com/lukasz-zak">lukasz-zak</a>
+  </p>
+  <p>
+    <small>Hosted on GitHub Pages &mdash; Theme by
+      <a href="https://twitter.com/michigangraham">mattgraham</a>
+    </small>
+  </p>
+</footer>
+<!--[if !IE]><script>fixScale(document);</script><![endif]-->
+
+<script src="bower_components/angular/angular.min.js"></script>
+<script src="bower_components/disqus-here/dist/disqus-here.min.js"></script>
+<script src="javascripts/app.js"></script>
+</body>
+</html>

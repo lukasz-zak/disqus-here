@@ -1008,3 +1008,17 @@ footer {
     width: auto;
   }
 }
+
+.left {
+    float: left;
+}
+
+.right {
+    float: right;
+}
+
+.result {
+    border: 1px solid #cbcbcb;
+    padding: 10px;
+    box-shadow: 1px 1px 240px -20px #000000;
+}

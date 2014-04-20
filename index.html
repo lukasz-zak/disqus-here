@@ -4,6 +4,7 @@
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="chrome=1">
   <title>Disqus-here by lukasz-zak</title>
+  <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootswatch/3.1.1/flatly/bootstrap.min.css">
   <link rel="stylesheet" href="stylesheets/styles.css">
   <link rel="stylesheet" href="stylesheets/pygment_trac.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
@@ -81,12 +82,20 @@
 
     <p>In your web page:</p>
 
-    <div class="highlight highlight-html"><pre><span class="nt">&lt;script </span><span class="na">src=</span><span
+    <div class="highlight"><pre><span class="nt">&lt;script </span><span class="na">src=</span><span
         class="s">"angular.js"</span><span class="nt">&gt;&lt;/script&gt;</span>
 <span class="nt">&lt;script </span><span class="na">src=</span><span class="s">"dist/disqus-here.min.js"</span><span
           class="nt">&gt;&lt;/script&gt;</span>
 </pre>
     </div>
+
+    <p>In your module:</p>
+
+    <div class="highlight">
+      <pre><span class="nx">angular</span><span class="p">.</span><span class="nx">module</span><span class="p">(</span><span class="s1">'demo'</span><span class="p">,</span> <span class="p">[</span><span class="s1">'disqusHere'</span><span class="p">])</span>
+</pre>
+    </div>
+    <hr/>
 
     <h2>
       <a name="documentation" class="anchor" href="#documentation">
@@ -247,7 +256,8 @@
         class="na">shortname=</span><span class="s">"your-disqus-shortname"</span><span class="nt">&gt;&lt;/disqus-here&gt;</span>
       </pre>
     </div>
-    <a href="basic-example.html">EXAMPLE</a>
+    <a class="btn btn-info btn-sm btn-block" href="basic-usage.html">DEMO</a>
+    <br/>
     <hr/>
 
     <h4>
@@ -270,6 +280,9 @@
 <span class="nt">&lt;/disqus-here&gt;</span>
 </pre>
     </div>
+    <a class="btn btn-info btn-sm btn-block" href="advanced-usage.html">DEMO</a>
+    <br/>
+    <hr/>
 
     <h2>
       <a name="contributing" class="anchor" href="#contributing">

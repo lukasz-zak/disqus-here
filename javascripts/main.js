@@ -1,17 +1,3 @@
-var sectionHeight = function() {
-  var total    = $(window).height(),
-      $section = $('section').css('height','auto');
-
-  if ($section.outerHeight(true) < total) {
-    var margin = $section.outerHeight(true) - $section.height();
-    $section.height(total - margin - 20);
-  } else {
-    $section.css('height','auto');
-  }
-}
-
-$(window).resize(sectionHeight);
-
 $(document).ready(function(){
   $("section h1, section h2").each(function(){
     $("nav ul").append("<li class='tag-" + this.nodeName.toLowerCase() + "'><a href='#" + $(this).text().toLowerCase().replace(/ /g, '-').replace(/[^\w-]+/g,'') + "'>" + $(this).text() + "</a></li>");
@@ -26,10 +12,7 @@ $(document).ready(function(){
     $(this).parent().addClass("active");
     event.preventDefault();    
   });
-  
-  sectionHeight();
-  
-  $('img').load(sectionHeight);
+
 });
 
 fixScale = function(doc) {

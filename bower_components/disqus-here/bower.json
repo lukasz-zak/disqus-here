@@ -1,0 +1,25 @@
+{
+  "name": "disqus-here",
+  "version": "0.0.1",
+  "main" : "dist/disqus-here.js",
+  "ignore" : [
+    "node_modules"
+  ],
+  "license": "MIT",
+  "repository" : {
+    "type": "git",
+    "url": "git://github.com/lukasz-zak/disqus-here"
+  },
+  "keywords": [
+    "angular",
+    "disqus",
+    "comments",
+    "angular-disqus"
+  ],
+  "dependencies": {
+    "angular": "~1.2.16"
+  },
+  "devDependencies": {
+    "angular-mocks": "latest"
+  }
+}
